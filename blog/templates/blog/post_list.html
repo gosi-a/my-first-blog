@@ -9,6 +9,14 @@
 		</header>
 		<nav>and what do I put in the nav?</nav>
 		<aside>this should be on the side</aside>
+		<br>
+		{% for post in posts %}
+		<article>
+			<time>published: {{ post.published_date }}</time>
+			<h2><a href="">{{ post.title }}</a></h2>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</article>
+		{% endfor %}	
 		<p>Hello World!</p>
 		<p>still not sure what I'm actually doing o_O</p>
 	</body>
